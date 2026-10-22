@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Pertemuan6</string>
+    <string name="app_name">NewPertemuan</string>
+    <string name="submit">Submit</string>
+    <string name="Back">Back</string>
+    <string name="nama_lengkap">NAMA LENGKAP</string>
+    <string name="jenis_kelamin">JENIS KELAMIN</string>
+    <string name="alamat">ALAMAT</string>
+    <string name="tampil">TAMPILAN</string>
+    <string name="home">Form Isian</string>
 </resources>
