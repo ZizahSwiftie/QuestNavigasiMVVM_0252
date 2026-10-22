@@ -17,7 +17,7 @@ import com.example.pertemuan6.R
 @Composable
 fun FormIsian(
     jenisK: List<String> = listOf("Laki-laki", "Perempuan"),
-    OnSubmitBtnClick: (String, String, String) -> Unit,
+    OnSubmitBtnClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     var textNama by remember { mutableStateOf("") }
