@@ -73,14 +73,13 @@ fun FormIsian(
             }
 
             OutlinedTextField(
-                value = textAlamat,
+                value = "",
                 singleLine = true,
-                shape = MaterialTheme.shapes.large,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(dimensionResource(id = R.dimen.padding_medium)),
-                label = { Text(stringResource(id = R.string.alamat)) },
-                onValueChange = { textAlamat = it }
+                label = { Text(stringResource(id = R.string.nama_lengkap)) },
+                onValueChange = { }
             )
 
             HorizontalDivider(
