@@ -79,17 +79,18 @@ fun FormIsian(
                 value = "",
                 singleLine = true,
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(dimensionResource(id = R.dimen.padding_medium)),
-                label = { Text(stringResource(id = R.string.alamat)) },
+                    .width(250.dp),
+                label = { Text(text = stringResource(id = R.string.alamat)) },
                 onValueChange = { }
             )
 
+            Spacer(modifier = Modifier.height(30.dp))
 
             Button(
-                modifier = Modifier.fillMaxWidth(0.8f),
-                enabled = textAlamat.isNotEmpty(),
-                onClick = { OnSubmitBtnClick(textNama, textJK, textAlamat) }
+                modifier = Modifier
+                    .fillMaxWidth(fraction = 1f)
+                    .padding(all = 25.dp),
+                onClick = OnSubmitBtnClick
             ) {
                 Text(stringResource(id = R.string.submit))
             }
