@@ -56,21 +56,23 @@ fun FormIsian(
             )
             Row {
                 jenisK.forEach { item ->
-                    Row(
-                        modifier = Modifier.selectable(
-                            selected = textJK == item,
-                            onClick = { textJK = item }
-                        ),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
                         RadioButton(
-                            selected = textJK == item,
-                            onClick = { textJK = item }
+                            selected = false,
+                            onClick = { item }
                         )
-                        Text(item)
+                        Text(text = item)
                     }
                 }
             }
+
+            HorizontalDivider(
+                modifier = Modifier
+                    .padding(all = 20.dp)
+                    .width(250.dp),
+                thickness = 1.dp,
+                color = Color.Red
+            )
 
             OutlinedTextField(
                 value = "",
@@ -78,18 +80,10 @@ fun FormIsian(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(dimensionResource(id = R.dimen.padding_medium)),
-                label = { Text(stringResource(id = R.string.nama_lengkap)) },
+                label = { Text(stringResource(id = R.string.alamat)) },
                 onValueChange = { }
             )
 
-            HorizontalDivider(
-                modifier = Modifier.padding(
-                    top = dimensionResource(id = R.dimen.padding_small),
-                    bottom = dimensionResource(id = R.dimen.padding_small)
-                ),
-                thickness = dimensionResource(id = R.dimen.thickness_divider),
-                color = Color.DarkGray
-            )
 
             Button(
                 modifier = Modifier.fillMaxWidth(0.8f),
